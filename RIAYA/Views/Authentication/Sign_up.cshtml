@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Sign up";
+}
+<div class="Sign_Up">
+    <div class="form-section">
+        <h1>Sign Up</h1>
+        <form>
+            <div class="name">
+                <input type="text" placeholder="First name" required>
+                <input type="text" placeholder="Last name" required>
+            </div>
+            <input type="email" placeholder="Email address" required>
+            <input type="tel" placeholder="Phone number" required>
+            <input type="text" placeholder="Your address" required>
+            <select required>
+                <option value="" disabled selected>Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <input type="date" placeholder="date of birth" required>
+            <input type="password" placeholder="Password" required>
+            <input type="password" placeholder="Confirm Password" required>
+            <div class="checkbox">
+                <input class="Checkbox" type="checkbox" required>
+                <span>By creating an account, I agree to our <a href="#">Terms of use</a> and <a href="#">Privacy Policy</a>.</span>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a asp-controller="Authentication" asp-action="Log_in">Log in</a></p>
+    </div>
+    <div class="image-section"></div>
+</div>

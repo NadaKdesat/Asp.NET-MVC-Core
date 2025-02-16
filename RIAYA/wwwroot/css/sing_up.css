@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=DM+Serif+Text:ital@0;1&family=Fredoka:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Stick+No+Bills:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=DM+Serif+Text:ital@0;1&family=Fredoka:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Stick+No+Bills:wght@200..800&display=swap');
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #053D76;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    scroll-margin-top: 150px;
+}
+
+body {
+    overflow-y: scroll;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Sign_Up {
+    font-family: "Nunito";
+    display: flex;
+    width: 80%;
+    max-width: 1000px;
+    background: #fff;
+    overflow: hidden;
+    margin:100px auto;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+}
+
+.form-section {
+    padding: 2rem;
+    flex: 1;
+    background-color: #fff;
+    color: #053D76;
+}
+
+.form-section h1 {
+    font-family: 'Lato';
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.form-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-section .name input{
+    width: 215px;
+}
+
+.form-section .name input:nth-child(1){
+    margin-right: 7px;
+}
+
+.form-section input,
+.form-section select,
+.form-section button {
+    padding: 0.8rem;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-section input,
+.form-section select {
+    background: white;
+    color: #555;
+    border: 1px solid #b4b4b4;
+}
+
+.form-section button {
+    border: none;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px 60px 10px 60px;
+    border-radius: 50px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3), inset 5px 5px 4px rgba(0, 0, 0, 0.3);
+    font-size: 20px;
+    font-family: "Nunito";
+
+}
+
+.form-section button:hover {
+    background-color: rgb(197, 0, 0);
+}
+.form-section p{
+    margin-left:110px;
+}
+
+.form-section a {
+    color: #053D76;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.form-section a:hover {
+    text-decoration: underline;
+}
+
+.image-section {
+    flex: 1;
+    background: url(../images/0ba6032aa13ff5cdb2d91f0e196812c2.jpg) no-repeat center center;
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+    margin: 80px 40px 80px 10px;
+}
+
+.form-section .Checkbox {
+    margin: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .Sign_Up {
+        flex-direction: column;
+        width: 90%;
+    }
+    .image-section {
+        height: 200px;
+        margin: 0;
+    }
+    .form-section {
+        padding: 1.5rem;
+    }
+    .form-section h1 {
+        font-size: 1.8rem;
+    }
+    .form-section .name input{
+        width: 162px;
+    }
+    .form-section span {
+        font-size: 13px;
+    }
+    .form-section p {
+        text-align: center;
+        font-size: 13px;
+        margin-left: 20px;
+    }
+    .form-section a {
+        font-size: 13px;
+    }
+    .form-section button {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
