@@ -1,0 +1,31 @@
+﻿@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Home Page";
+    var Cards = new List<dynamic>
+    {
+        new { img="~/img/download.jpg", title="Apartment with Amazing Park View" , price="$45.00"},
+        new { img="~/img/download2.jpg", title="Double Deluxe Room -Double Bed" , price="$35.00"},
+        new { img="~/img/download3.jpg", title="Luxury Apartment - Ground Floor" , price="$40.00"}
+    };
+}
+
+@section Style {
+    <link rel="stylesheet" href="~/css/Index.css" asp-append-version="true" />
+}
+
+<div class="text-center">
+    <h1>Extraordinary rooms with elegant,<br /> yet a rustic atmosphere</h1>
+    <div class="row cards">
+    @foreach (var card in Cards)
+    {
+        <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src=@Url.Content(card.img) alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">@card.title</h5>
+                <p class="card-text">@card.price</p>
+                <a class="card-text">View</a>
+            </div>
+        </div>
+    }
+    </div>
+</div>

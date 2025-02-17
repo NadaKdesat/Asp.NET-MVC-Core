@@ -1,0 +1,31 @@
+﻿@{
+    Layout = "_AdminLayout";
+    var students = new List<dynamic>
+    {
+        new { Username = "Ali", Age = 20, Email = "ali@gmail.com" },
+        new { Username = "Sara", Age = 22, Email = "sara@gmail.com" },
+        new { Username = "Omar", Age = 21, Email = "omar@gmail.com" }
+    };
+}
+
+<h2 style="color:black; margin:75px 170px 20px 170px;">Users List</h2>
+
+<table class="table table-bordered table-striped" style="margin:5px 0px 5px 170px; max-width:900px;  ">
+    <thead class="table-dark">
+        <tr>
+            <th>Username</th>
+            <th>Age</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in students)
+        {
+            <tr>
+                <td>@student.Username</td>
+                <td>@student.Age</td>
+                <td>@student.Email</td>
+            </tr>
+        }
+    </tbody>
+</table>
