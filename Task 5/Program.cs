@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using Task_5.Models;
+using Task_52.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -28,6 +28,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Users}/{action=Index}/{id?}");
 
 app.Run();
