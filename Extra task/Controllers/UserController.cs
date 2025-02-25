@@ -26,15 +26,13 @@ namespace Extra_task.Controllers
         {
             try
             {
-                if (!ModelState.IsValid)
+                if (ModelState.IsValid)
                 {
-                    return View(user);
-
+                    _context.Add(user);
+                    _context.SaveChanges();
+                    return RedirectToAction(nameof(Login));
                 }
-                _context.Add(user);
-                _context.SaveChanges();
-
-                return RedirectToAction(nameof(Login));
+                return View(user);
             }
             catch
             {
