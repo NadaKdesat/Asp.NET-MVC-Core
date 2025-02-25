@@ -24,6 +24,8 @@ namespace Task_6.Controllers
         [HttpPost]
         public IActionResult Create(Product product)
         {
+            //_context.Add(product)=_context.Products.Add(product);
+            //or
             _context.Add(product);
             _context.SaveChanges();
             return RedirectToAction("Index");
