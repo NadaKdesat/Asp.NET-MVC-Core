@@ -81,12 +81,14 @@ button.accept-policy {
     }
 
 .navbar {
-    position: absolute;
+    position:fixed;
+/*    position: absolute;*/
     top: 0;
     width: 100%;
     background-color: #444;
     color: white !important;
     text-align: left;
+    z-index:1000;
 }
 
 .wrapper {
@@ -108,43 +110,4 @@ button.accept-policy {
 .main-content {
     margin-left: 250px;
     flex-grow: 1;
-}
-
-
-/* تأكد من أن الـ HTML و Body يمتلكان ارتفاع 100% */
-html, body {
-    height: 100%;
-    margin: 0;
-}
-
-/* استخدام Flexbox لتمديد الصفحة بالكامل */
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-/* تمديد الـ main ليأخذ المساحة المتبقية بين الـ header والـ footer */
-main {
-    display:block;
-    flex-grow: 1;
-    min-height: calc(100vh - 120px); /* Adjust this value to fit your header + footer height */
-}
-
-/* جعل الـ sidebar يأخذ ارتفاع كامل الصفحة */
-.sidebar {
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 250px; /* Adjust the width as per your design */
-}
-
-/* التأكد من أن الـ footer يبقى في أسفل الصفحة */
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 10px 0;
-    text-align: center;
 }
